@@ -2,5 +2,4 @@ jdk:
   - openjdk11
 before_install:
   - yes | sdkmanager "ndk;21.4.7075529" 2>/dev/null
-build:
-  - ./gradlew clean -Pgroup=com.github.MykolaMelnyk -Pversion=$VERSION -PNDK_HOME=$ANDROID_HOME/ndk/21.4.7075529 -xtest publishToMavenLocal
+  - echo "ndk.dir=$ANDROID_HOME/ndk/21.4.7075529" >> local.properties
