@@ -24,6 +24,8 @@ find_library(
         log-lib
         log)
 
+target_compile_options(nativelib PRIVATE -Wno-implicit-function-declaration)
+
 target_link_libraries(
         nativelib
         ${log-lib})
